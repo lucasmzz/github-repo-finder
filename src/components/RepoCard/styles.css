@@ -1,0 +1,54 @@
+.repo-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.repo-card-header {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo-card-avatar {
+  border-radius: 50%;
+}
+.repo-card-watchers {
+  display: flex;
+  align-items: center;
+}
+
+.repo-card-content {
+  width: 75%;
+}
+
+.repo-card-actions {
+  margin-top: 30px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.repo-card-actions a,
+.repo-card-actions button {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-close-modal {
+  background-color: gray;
+}
+
+.btn-visit-repo {
+  background-color: green;
+}

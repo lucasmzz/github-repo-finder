@@ -1,0 +1,40 @@
+#results-container {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.repo-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  border: 0.5px solid gray;
+  border-radius: 2px;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+  margin: 1px 0;
+}
+
+.repo-row:hover {
+  transform: scale(1.02);
+  border: 0.5px solid dodgerblue;
+  box-shadow: 1px 1px 10px rgb(110, 105, 105);
+}
+
+.repo-btn-details {
+  margin-left: auto;
+  background-color: dodgerblue;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+}
+
+.repo-btn-delete {
+  margin: 0 20px;
+}
+
+.repo-btn-delete:hover {
+  color: orangered;
+  margin: 0 20px;
+}

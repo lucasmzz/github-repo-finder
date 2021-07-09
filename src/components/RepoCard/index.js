@@ -3,6 +3,8 @@ import StarIcon from "@material-ui/icons/Star";
 import "./styles.css";
 
 const RepoCard = ({ repo, onCloseModal }) => {
+  //Returns a card that displays detailed info about the selected repository.
+  //In this implementation, it is consumed by the Modal component.
   return (
     <div className="repo-card">
       <div className="repo-card-header">

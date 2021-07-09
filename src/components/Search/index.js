@@ -37,15 +37,20 @@ const Search = () => {
     }
   }, []);
 
+  //Store results in localStorage after it changes.
   useEffect(() => {
     localStorage.setItem("repo-results", JSON.stringify(results));
   });
 
+  //Method to update state with changes in the search term input by the user.
   const handleSearchTermChange = (e) => {
     e.preventDefault();
     setSearchTerm(e.target.value);
   };
 
+  //Method to execute when user attempts to search repos on github.
+  //Tests basic input validation with Regex (only allowing letters [A-Z] and _ )
+  //Makes async request to Github REST API using Axios.
   const handleSearchTermSubmit = async (e) => {
     e.preventDefault();
 
@@ -83,6 +88,7 @@ const Search = () => {
     }
   };
 
+  //Delets a repo from the results list if the user confirms the action.
   const handleDeleteRepo = (repo) => {
     const consent = window.confirm(
       `Do you want to remove ${repo.name} from the list?`
@@ -90,11 +96,13 @@ const Search = () => {
     if (consent) setResults(results.filter((item) => item.id !== repo.id));
   };
 
+  //Stores the selected repo from the list in the app state.
   const handleSelectRepo = (repo) => {
     setSelectedRepo(repo);
     setShowSelectedRepo(true);
   };
 
+  //to clear searchresults (e.g. in order to start a new search)
   const handleClearResults = (e) => {
     e.preventDefault();
     setSearchTerm("");
@@ -102,14 +110,17 @@ const Search = () => {
     setResults([]);
   };
 
+  //Dummy loading component - can be replaced by a cool spinner!
   const Loading = () => {
     return <div id="loading">Loading...</div>;
   };
 
+  //Dummy component to handle the errors during the search.
   const ErrorPanel = () => {
     return <div id="error-panel">{error}</div>;
   };
 
+  //Dummy component to display the count of results.
   const ResultsCounter = () => {
     return (
       <div id="results-counter">

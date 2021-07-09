@@ -3,6 +3,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import "./styles.css";
 
 const SearchResults = ({ onRepoSelect, onRepoDelete, results }) => {
+  //displays the results of the search in a list format.
   const renderResults = (arr) => {
     return arr.map((repo) => (
       <div key={repo.id} className="repo-row">
